@@ -289,45 +289,12 @@ I'm always exploring new technologies, from AI integrations to 3D interactive in
                     <!-- Portfolio End -->
 
                     
-                 <form id="contactForm" style="max-width: 600px; margin: auto;">
-  <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 10px; margin: 10px 0;">
-  <input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 10px; margin: 10px 0;">
-  <input type="text" name="subject" placeholder="Subject" required style="width: 100%; padding: 10px; margin: 10px 0;">
-  <textarea name="message" placeholder="Your Message" required style="width: 100%; padding: 10px; margin: 10px 0;"></textarea>
-  <button type="submit" style="padding: 10px 20px; background: teal; color: white; border: none;">Send</button>
-</form>
-
-<script>
-  const form = document.getElementById('contactForm');
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-
-    const formData = new FormData(form);
-    const data = Object.fromEntries(formData);
-
-    try {
-      const response = await fetch('https://script.google.com/macros/s/AKfycbwjQPUTyL3RWrcwruDu5l318ol-BBEUrSeMH_uhh1DVnFTkaxL-LUDyPCVug4c166as/exec', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-      });
-
-      const result = await response.json();
-
-      if (result.result === "success") {
-        alert("Form submitted successfully!");
-        form.reset();
-      } else {
-        alert("Error: " + result.message);
-      }
-    } catch (error) {
-      alert("There was a problem submitting the form.");
-      console.error("Fetch error:", error);
-    }
-  });
-</script>
+         <div style="max-width: 600px; margin: auto; text-align: center; padding: 20px;">
+  <a href="mailto:safrazsalim1@gmail.com?subject=Contact%20from%20Website" 
+     style="display: inline-block; padding: 12px 25px; background: teal; color: white; text-decoration: none; border-radius: 5px; font-size: 16px;">
+    contact me
+  </a>
+</div>
 
 
 
